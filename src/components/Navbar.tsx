@@ -34,7 +34,7 @@ export default function Navbar() {
       <motion.nav
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           scrolled
             ? "py-4 bg-near-black/80 backdrop-blur-md border-b border-white/5"
@@ -111,7 +111,7 @@ export default function Navbar() {
             initial={{ y: "-100%" }}
             animate={{ y: 0 }}
             exit={{ y: "-100%" }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
             className="fixed inset-0 bg-near-black z-40 flex flex-col justify-between p-8 md:p-16"
           >
             {/* Background Accent Lines */}
