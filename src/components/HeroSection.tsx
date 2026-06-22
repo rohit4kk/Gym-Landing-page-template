@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import Image from "next/image";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform, cubicBezier } from "framer-motion";
 import Magnetic from "@/components/Magnetic";
 
 interface SplitWordProps {
@@ -31,7 +31,7 @@ function SplitWord({ text, delayOffset }: SplitWordProps) {
       rotate: 0,
       transition: {
         duration: 0.85,
-        ease: [0.16, 1, 0.3, 1] as const,
+        ease: cubicBezier(0.16, 1, 0.3, 1),
       },
     },
   };
