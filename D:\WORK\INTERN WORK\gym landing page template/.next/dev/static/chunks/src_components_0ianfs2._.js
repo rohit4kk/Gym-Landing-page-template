@@ -3176,10 +3176,16 @@ function CoachCard({ name, role, specialty, image, stats, index, rotation }) {
         springX,
         springY
     ], {
-        "CoachCard.useTransform[glareBg]": ([x, y])=>{
+        "CoachCard.useTransform[glareBg]": (values)=>{
+            const x = Number(values[0] ?? 0);
+            const y = Number(values[1] ?? 0);
             const pctX = (x + 0.5) * 100;
             const pctY = (y + 0.5) * 100;
-            return `radial-gradient(circle at ${pctX}% ${pctY}%, rgba(255,255,255,0.12) 0%, transparent 60%)`;
+            return `radial-gradient(
+      circle at ${pctX}% ${pctY}%,
+      rgba(255,255,255,0.12) 0%,
+      transparent 60%
+    )`;
         }
     }["CoachCard.useTransform[glareBg]"]);
     const handleMouseMove = (e)=>{
@@ -3242,7 +3248,7 @@ function CoachCard({ name, role, specialty, image, stats, index, rotation }) {
                     className: "absolute inset-0 z-10 pointer-events-none"
                 }, void 0, false, {
                     fileName: "[project]/src/components/CoachesSection.tsx",
-                    lineNumber: 79,
+                    lineNumber: 87,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3256,20 +3262,20 @@ function CoachCard({ name, role, specialty, image, stats, index, rotation }) {
                             sizes: "(max-width: 768px) 100vw, 30vw"
                         }, void 0, false, {
                             fileName: "[project]/src/components/CoachesSection.tsx",
-                            lineNumber: 89,
+                            lineNumber: 97,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-black/30"
                         }, void 0, false, {
                             fileName: "[project]/src/components/CoachesSection.tsx",
-                            lineNumber: 97,
+                            lineNumber: 105,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/CoachesSection.tsx",
-                    lineNumber: 88,
+                    lineNumber: 96,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3286,7 +3292,7 @@ function CoachCard({ name, role, specialty, image, stats, index, rotation }) {
                                     children: "LAB OPERATOR"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/CoachesSection.tsx",
-                                    lineNumber: 103,
+                                    lineNumber: 111,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3294,13 +3300,13 @@ function CoachCard({ name, role, specialty, image, stats, index, rotation }) {
                                     children: role
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/CoachesSection.tsx",
-                                    lineNumber: 104,
+                                    lineNumber: 112,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/CoachesSection.tsx",
-                            lineNumber: 102,
+                            lineNumber: 110,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3311,13 +3317,13 @@ function CoachCard({ name, role, specialty, image, stats, index, rotation }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/CoachesSection.tsx",
-                            lineNumber: 106,
+                            lineNumber: 114,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/CoachesSection.tsx",
-                    lineNumber: 101,
+                    lineNumber: 109,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3338,7 +3344,7 @@ function CoachCard({ name, role, specialty, image, stats, index, rotation }) {
                                                     children: stat.label
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/CoachesSection.tsx",
-                                                    lineNumber: 119,
+                                                    lineNumber: 127,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3348,13 +3354,13 @@ function CoachCard({ name, role, specialty, image, stats, index, rotation }) {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/CoachesSection.tsx",
-                                                    lineNumber: 120,
+                                                    lineNumber: 128,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/CoachesSection.tsx",
-                                            lineNumber: 118,
+                                            lineNumber: 126,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3376,23 +3382,23 @@ function CoachCard({ name, role, specialty, image, stats, index, rotation }) {
                                                 className: "h-full bg-brand-red rounded-full"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/CoachesSection.tsx",
-                                                lineNumber: 124,
+                                                lineNumber: 132,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/CoachesSection.tsx",
-                                            lineNumber: 123,
+                                            lineNumber: 131,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, i, true, {
                                     fileName: "[project]/src/components/CoachesSection.tsx",
-                                    lineNumber: 117,
+                                    lineNumber: 125,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/components/CoachesSection.tsx",
-                            lineNumber: 115,
+                            lineNumber: 123,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3402,7 +3408,7 @@ function CoachCard({ name, role, specialty, image, stats, index, rotation }) {
                                     children: specialty
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/CoachesSection.tsx",
-                                    lineNumber: 138,
+                                    lineNumber: 146,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -3410,19 +3416,19 @@ function CoachCard({ name, role, specialty, image, stats, index, rotation }) {
                                     children: name
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/CoachesSection.tsx",
-                                    lineNumber: 141,
+                                    lineNumber: 149,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/CoachesSection.tsx",
-                            lineNumber: 137,
+                            lineNumber: 145,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/CoachesSection.tsx",
-                    lineNumber: 112,
+                    lineNumber: 120,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3432,34 +3438,34 @@ function CoachCard({ name, role, specialty, image, stats, index, rotation }) {
                             className: "absolute top-0 left-0 w-2 h-2 border-t border-l border-white/20"
                         }, void 0, false, {
                             fileName: "[project]/src/components/CoachesSection.tsx",
-                            lineNumber: 149,
+                            lineNumber: 157,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "absolute top-0 right-0 w-2 h-2 border-t border-r border-white/20"
                         }, void 0, false, {
                             fileName: "[project]/src/components/CoachesSection.tsx",
-                            lineNumber: 150,
+                            lineNumber: 158,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white/20"
                         }, void 0, false, {
                             fileName: "[project]/src/components/CoachesSection.tsx",
-                            lineNumber: 151,
+                            lineNumber: 159,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/20"
                         }, void 0, false, {
                             fileName: "[project]/src/components/CoachesSection.tsx",
-                            lineNumber: 152,
+                            lineNumber: 160,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/CoachesSection.tsx",
-                    lineNumber: 148,
+                    lineNumber: 156,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3470,18 +3476,18 @@ function CoachCard({ name, role, specialty, image, stats, index, rotation }) {
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/CoachesSection.tsx",
-                    lineNumber: 156,
+                    lineNumber: 164,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/CoachesSection.tsx",
-            lineNumber: 69,
+            lineNumber: 77,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/CoachesSection.tsx",
-        lineNumber: 57,
+        lineNumber: 65,
         columnNumber: 5
     }, this);
 }
@@ -3575,7 +3581,7 @@ function CoachesSection() {
                 children: "ELITE"
             }, void 0, false, {
                 fileName: "[project]/src/components/CoachesSection.tsx",
-                lineNumber: 211,
+                lineNumber: 219,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3594,14 +3600,14 @@ function CoachesSection() {
                                                 children: "●"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/CoachesSection.tsx",
-                                                lineNumber: 221,
+                                                lineNumber: 229,
                                                 columnNumber: 15
                                             }, this),
                                             " EXPERT CREW"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/CoachesSection.tsx",
-                                        lineNumber: 220,
+                                        lineNumber: 228,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -3610,7 +3616,7 @@ function CoachesSection() {
                                             "ATHLETIC ",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/src/components/CoachesSection.tsx",
-                                                lineNumber: 224,
+                                                lineNumber: 232,
                                                 columnNumber: 24
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3621,7 +3627,7 @@ function CoachesSection() {
                                                 children: "MASTERS"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/CoachesSection.tsx",
-                                                lineNumber: 225,
+                                                lineNumber: 233,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3629,19 +3635,19 @@ function CoachesSection() {
                                                 children: "coaches"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/CoachesSection.tsx",
-                                                lineNumber: 226,
+                                                lineNumber: 234,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/CoachesSection.tsx",
-                                        lineNumber: 223,
+                                        lineNumber: 231,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/CoachesSection.tsx",
-                                lineNumber: 219,
+                                lineNumber: 227,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3652,7 +3658,7 @@ function CoachesSection() {
                                         children: "Our coaching staff are elite sports scientists, hybrid athletes, and recovery specialists. They don't run circuits—they architect systemic physiological changes."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/CoachesSection.tsx",
-                                        lineNumber: 233,
+                                        lineNumber: 241,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -3671,19 +3677,19 @@ function CoachesSection() {
                                         children: "100% Certified Operators ⚡️"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/CoachesSection.tsx",
-                                        lineNumber: 237,
+                                        lineNumber: 245,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/CoachesSection.tsx",
-                                lineNumber: 232,
+                                lineNumber: 240,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/CoachesSection.tsx",
-                        lineNumber: 218,
+                        lineNumber: 226,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3698,24 +3704,24 @@ function CoachesSection() {
                                 rotation: coach.rotation
                             }, index, false, {
                                 fileName: "[project]/src/components/CoachesSection.tsx",
-                                lineNumber: 251,
+                                lineNumber: 259,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/components/CoachesSection.tsx",
-                        lineNumber: 249,
+                        lineNumber: 257,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/CoachesSection.tsx",
-                lineNumber: 215,
+                lineNumber: 223,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/CoachesSection.tsx",
-        lineNumber: 206,
+        lineNumber: 214,
         columnNumber: 5
     }, this);
 }

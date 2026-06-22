@@ -27,14 +27,22 @@ function CoachCard({ name, role, specialty, image, stats, index, rotation }: Coa
   const tiltX = useTransform(springY, [-0.5, 0.5], [8, -8]);
   const tiltY = useTransform(springX, [-0.5, 0.5], [-8, 8]);
   
-  const glareBg = useTransform(
-    [springX, springY],
-    ([x, y]) => {
-      const pctX = (x + 0.5) * 100;
-      const pctY = (y + 0.5) * 100;
-      return `radial-gradient(circle at ${pctX}% ${pctY}%, rgba(255,255,255,0.12) 0%, transparent 60%)`;
-    }
-  );
+const glareBg = useTransform(
+  [springX, springY],
+  (values) => {
+    const x = Number(values[0] ?? 0);
+    const y = Number(values[1] ?? 0);
+
+    const pctX = (x + 0.5) * 100;
+    const pctY = (y + 0.5) * 100;
+
+    return `radial-gradient(
+      circle at ${pctX}% ${pctY}%,
+      rgba(255,255,255,0.12) 0%,
+      transparent 60%
+    )`;
+  }
+);
   
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!cardRef.current) return;
